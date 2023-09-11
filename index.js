@@ -17,7 +17,6 @@ mongoose.set('bufferCommands', false);
 mongoose.connect('mongodb+srv://sanjanas0507:Sanjana%4001@cluster0.r1lfigu.mongodb.net/todolistDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 30000, 
     ssl: true
   });
 
