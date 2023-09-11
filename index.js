@@ -18,6 +18,8 @@ mongoose.connect('mongodb+srv://sanjanas0507:Sanjana%4001@cluster0.r1lfigu.mongo
   useNewUrlParser: true,
   useUnifiedTopology: true,
     serverSelectionTimeoutMS: 30000, // 30 seconds
+    ssl: true, // Enable SSL/TLS
+    sslValidate: false, // Disable certificate validation (for testing only)
   });
 
 const itemSchema = new mongoose.Schema({
