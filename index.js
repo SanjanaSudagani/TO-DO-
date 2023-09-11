@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import _ from "lodash";
 
 const app = express();
-const port = process.env.PORT || 3000;
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -145,6 +145,11 @@ app.get("/:customName", async (req, res) => {
 //   Work.insertMany(witem);
 //   res.redirect("/work");
 // });
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
