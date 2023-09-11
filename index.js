@@ -134,18 +134,6 @@ app.get("/:customName", async (req, res) => {
   
 });
 
-// app.get("/work", async (req, res) => {
-//   const workItems = await Work.find({});
-//   res.render("index.ejs", {
-//     listTitle: "Work List",
-//     newListItems: workItems,
-//   });
-// });
-// app.post("/work", (req, res) => {
-//   const witem = req.body.newItem;
-//   Work.insertMany(witem);
-//   res.redirect("/work");
-// });
 
 let port = process.env.PORT;
 if (port == null || port == "") {
